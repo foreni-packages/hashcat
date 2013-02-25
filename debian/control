@@ -1,15 +1,20 @@
 Source: hashcat
-Section: unknown
+Section: utils
 Priority: extra
 Maintainer: Devon Kearns <dookie@kali.org>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/hashcat.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/hashcat.git;a=summary
+Homepage: https://hashcat.net/hashcat/
+Vcs-Git: ssh://git@git.kali.org/packages/hashcat.git
+Vcs-Browser: http://git.kali.org/gitweb/?p=packages/hashcat.git;a=summary
 
 Package: hashcat
-Architecture: any
+Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: World’s fastest CPU-based password recovery tool
+ Hashcat is the world’s fastest CPU-based password recovery tool.
+ .
+ While it's not as fast as its GPU counterparts oclHashcat-plus and 
+ oclHashcat-lite, large lists can be easily split in half with a good dictionary
+ and a bit of knowledge of the command switches.
+

@@ -11,3 +11,15 @@
 
 %:
 	dh $@ 
+
+DEB_HOST_ARCH           ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+ifeq ($(DEB_HOST_ARCH),amd64)
+	hashcatbin=hashcat-cli64.bin
+else
+	hashcatbin=hashcat-cli32.bin
+endif
+
+override_dh_auto_install:
+	dh_installdirs
+	install $(hashcatbin) $(CURDIR)/debian/hashcat/usr/share/hashcat/hashcat.bin

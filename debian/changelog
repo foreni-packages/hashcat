@@ -1,5 +1,5 @@
-hashcat (0.42-1) unstable; urgency=low
+hashcat (0.42-1kali0) kali; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release 
 
  -- Devon Kearns <dookie@kali.org>  Mon, 25 Feb 2013 06:27:37 -0700

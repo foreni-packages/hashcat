@@ -1,0 +1,8 @@
+helper-script/* usr/bin/
+docs usr/share/hashcat/
+examples usr/share/hashcat/
+rules usr/share/hashcat/
+salts usr/share/hashcat/
+tables usr/share/hashcat/
+hashcat-cliAVX.bin usr/share/hashcat/
+hashcat-cliXOP.bin usr/share/hashcat/
