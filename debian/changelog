@@ -1,3 +1,9 @@
+hashcat (0.42-1kali1) kali; urgency=low
+
+  * Edited rules to fix build error on buildbots
+
+ -- Devon Kearns <dookie@kali.org>  Mon, 25 Feb 2013 06:45:51 -0700
+
 hashcat (0.42-1kali0) kali; urgency=low
 
   * Initial release 
