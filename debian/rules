@@ -23,3 +23,5 @@ endif
 override_dh_auto_install:
 	dh_installdirs
 	install $(hashcatbin) $(CURDIR)/debian/hashcat/usr/share/hashcat/hashcat.bin
+
+override_dh_shlibdeps:
