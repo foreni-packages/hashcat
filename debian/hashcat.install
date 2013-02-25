@@ -1,4 +1,4 @@
-helper-script/* usr/bin/
+debian/helper-script/* usr/bin/
 docs usr/share/hashcat/
 examples usr/share/hashcat/
 rules usr/share/hashcat/
