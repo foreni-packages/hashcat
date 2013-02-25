@@ -1,0 +1,15 @@
+Hashcat
+Author: atom
+Contributions from: m4tr1x, Xanadrel, radix
+
+* The Countdown QuickPerm Algorithm (used in Permutation Attack)
+
+Author: Phillip Paul Fuchs
+
+* Rule rules/passwordspro.rule
+
+Author: InsidePro Software
+
+* Hashcat user manuals
+
+Author: d3ad0ne, radix

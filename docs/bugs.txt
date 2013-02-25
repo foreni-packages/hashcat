@@ -1,0 +1,3 @@
+known bugs in v0.40:
+
+* complete runtime summary is not shown if all hashes have been recovered.

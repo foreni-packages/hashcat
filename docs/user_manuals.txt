@@ -1,0 +1,6 @@
+The user manuals are constantly updated. Thats why they are not part of the distribtion.
+
+You can download the basic user manual here: http://hashcat.net/files/hashcat_user_manual.pdf
+
+For advanced hashcat usage visit this site: http://ob-security.info
+

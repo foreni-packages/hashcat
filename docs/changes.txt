@@ -1,0 +1,668 @@
+* changes v0.41 -> v0.42:
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 141: EPiServer 6.x
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5000: SHA-3(Keccak)
+
+type: feature
+file: hashcat-cli
+desc: added --hex-salt
+
+type: feature
+file: hashcat-cli
+desc: added new rule function (JtR compatible): M - memorize the word (for use with "Q", "X", "4" and "6")
+
+type: feature
+file: hashcat-cli
+desc: added new rule function (JtR compatible): Q - query the memory and reject the word unless it has changed
+
+type: feature
+file: hashcat-cli
+desc: added new rule function (JtR compatible): X - extract substring NM from memory and insert into current word at I
+
+type: feature
+file: hashcat-cli
+desc: added new rule function: 4 - appends word from memory to current word
+
+type: feature
+file: hashcat-cli
+desc: added new rule function: 6 - prepends word from memory to current word
+
+type: bug
+file: host programs
+desc: fixed -m 1731 bug
+cred: Incisive
+
+type: bug
+file: host programs
+desc: fixed -1 ?a binding
+cred: mem5
+
+type: typo
+file: host programs
+desc: fixed --help screen
+cred: blaz
+
+* changes v0.40 -> v0.41:
+
+type: feature
+file: host programs
+desc: added support for AVX and XOP instruction set
+
+type: feature
+file: hashcat-cli
+desc: added wide-character support to table-lookup attack engine
+cred: epixoip
+
+type: feature
+file: host programs
+desc: optimized word-generator in -a 3 mode
+
+type: feature
+file: host programs
+desc: change potfile format to hash:password
+cred: m4tr1x
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 122: OS X v10.4, 10.5, 10.6
+cred: radix
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 1722: OS X v10.7
+cred: radix
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 50: HMAC-MD5 (key = $pass)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 60: HMAC-MD5 (key = $salt)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 150: HMAC-SHA1 (key = $pass)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 160: HMAC-SHA1 (key = $salt)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 1450: HMAC-SHA256 (key = $pass)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 1460: HMAC-SHA256 (key = $salt)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 1750: HMAC-SHA512 (key = $pass)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 1760: HMAC-SHA512 (key = $salt)
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 1731: MSSQL 2012
+cred: radix
+
+type: bug
+file: hashcat-cli
+desc: Fixed a bug when using -e with salted sha256 or sha512
+cred: Rub3nCT
+
+* changes v0.39 -> v0.40:
+
+type: feature
+file: hashcat-cli
+desc: added -m 1410: sha256($pass.$salt)
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: added -m 1420: sha256($salt.$pass)
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: added -m 1710: sha512($pass.$salt)
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: added -m 1720: sha512($salt.$pass)
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: added -m 4400: md5(sha1($pass))
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: added -m 4700: sha1(md5($pass))
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: added OSX compiling support
+cred: radix
+
+type: change
+file: hashcat-cli
+desc: modified hash modes to match oclHashcat-plus
+cred: radix
+
+type: change
+file: best64.rule
+desc: replaced content of best64.rule with the best rules from the best64.rule contest
+
+type: extension
+file: A0.M1410, A0.M1420, A0.M1710, A0.M1720, A0.M4400, A0.M4700
+desc: added examples files
+cred: Xanadrel
+
+type: bug
+file: hashcat-cli
+desc: Fixed a bug in sha512crypt leading to code not found
+
+type: bug
+file: hashcat-cli
+desc: Fixed a bug in commandline-parser which occours if running in --stdout mode
+cred: Xanadrel
+
+type: bug
+file: hashcat-cli
+desc: Fixed a bug in mask processor when using ?h, ?D, ?F or ?R
+cred: undeath
+
+type: bug
+file: hashcat-cli
+desc: Fixed a bug in mask-attack mode when using --stdout mode
+
+type: bug
+file: hashcat-cli
+desc: fixed a race condition in --remove leading to not removing cracked hashes from hashlist
+cred: Boris
+
+type: documentation
+file: hashcat-cli
+desc: added default masks
+cred: Xanadrel
+
+* changes v0.38 -> v0.39:
+
+type: feature
+file: hashcat-cli
+desc: Replaced Brute-force Attack with backported Mask-Attack from oclHashcat-lite v0.09
+cred: radix, Richie
+
+type: feature
+file: hashcat-cli
+desc: Introduced new rule 'E', upper cases the first letter and every letter after a space
+cred: Hash-IT
+
+type: bug
+file: hashcat-cli
+desc: fixed a bug that caused each 4th rule getting dropped silently
+cred: Kgx Pnqvhm, happyKiddy, chort, san
+
+type: change
+file: host programs
+desc: EULA. Removed sections 2, 6, 8 and 9. Relaxed sections 3 and 7
+cred: hdmoore
+
+* changes v0.37 -> v0.38:
+
+type: bug
+file: hashcat-cli
+desc: 8bit char in table-file in key position caused segmentation fault
+cred: Undeath
+
+type: bug
+file: hashcat-cli
+desc: space char in table-file caused endless loop
+cred: Xanadrel
+
+type: bug
+file: hashcat-cli
+desc: cracking with plains generated by an rejected rule caused weird results
+cred: Xanadrel, lanjelot
+
+type: bug
+file: hashcat-cli
+desc: fixed bug display status at 100% progress even if in --quiet mode
+cred: Xanadrel
+
+type: bug
+file: tables/leet.table
+desc: fixed bug by adding the letter itself to the right side
+cred: lanjelot
+
+type: improvement
+file: hashcat-cli
+desc: added -t shortcut for --table-file
+
+type: improvement
+file: rules
+desc: added rules/T0XlC.rule
+cred: T0XlC
+
+type: improvement
+file: rules
+desc: backported rules/toggles[12345].rule from oclHashcat-plus v0.06
+cred: legion, undeath
+
+type: improvement
+file: rules
+desc: backported rules/d3ad0ne.rule from oclHashcat-plus v0.06
+cred: d3adone
+
+type: improvement
+file: rules
+desc: backported rules/perfect.rule from oclHashcat-plus v0.06
+
+* changes v0.36 -> v0.37:
+
+type: bug
+file: hashcat-cli
+desc: rule % was not working correctly
+cred: Tommie_c
+
+type: bug
+file: hashcat-cli
+desc: attack-mode 2 was not working if word from dict was > 9 chars
+cred: blandyuk
+
+type: improvement
+file: hashcat-cli
+desc: added --stdout mode
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: removed --debug-mode 3 (use --stdout instead)
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added --quiet mode
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added --disable-potfile
+cred: ksp
+
+type: improvement
+file: hashcat-cli
+desc: added -m 15 = vBulletin > v3.8.5
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added new rule "yN", prepends a block of N chars from and to the start
+cred: d3ad0ne
+
+type: improvement
+file: hashcat-cli
+desc: added new rule "YN", appends a block of N chars from and to the end
+cred: d3ad0ne
+
+* changes v0.35 -> v0.36:
+
+type: bug
+file: hashcat-cli
+desc: crashes if using -a 1 or -a 2 in combination with a single rule
+cred: shopeonarope
+
+type: bug
+file: hashcat-cli
+desc: sse2 inefficiently used if using in -a 1 in combination with rules
+cred: shopeonarope
+
+type: bug
+file: hashcat-cli
+desc: rule K and @ were not working correctly
+cred: d3ad0ne
+
+type: bug
+file: hashcat-cli
+desc: rule i was not working correctly
+cred: Tommie_c
+
+type: improvement
+file: hashcat-cli
+desc: added new rule ".N", replaces char on pos N with char from pos N + 1
+cred: d3ad0ne
+
+type: improvement
+file: hashcat-cli
+desc: added new rule ",N", replaces char on pos N with char from pos N - 1
+cred: d3ad0ne
+
+type: improvement
+file: hashcat-cli
+desc: implemented new attack-mode 5 Table-Lookup Attack.
+cred: d3ad0ne
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1600 = MD5(APR)
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1700 = SHA512
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1700 = SHA512(Unix)
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: optimized performance of all double iterated attacks
+
+* changes v0.34 -> v0.35:
+
+type: bug
+file: hashcat-cli
+desc: crashes if using multiple wordlists in -a 4 mode
+cred: k9
+
+type: bug
+file: hashcat-cli
+desc: crashes on windows if wordlist contains no useable words
+cred: k9
+
+type: bug
+file: oclHashcat
+desc: rule ] was not working correctly
+cred: mastercracker
+
+type: bug
+file: hashcat-cli
+desc: crashes in some special constellation if wordlist contains empty lines
+cred: atom
+
+type: bug
+file: hashcat-cli
+desc: removed some optimizations that caused crashes on older cpus
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added 64 bit version
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1400: SHA256
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added --remove to remove hash from hashlist once it is cracked
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: removed feature loading of already cracked hashes from hashlist
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added debug-mode 3 which can be used an --stdout emulation
+cred: Minga
+
+type: improvement
+file: hashcat-cli
+desc: increased debug-mode 0 to 1 and debug-mode 1 to 2 for better usability
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added --ouput-format parameter
+cred: Xanadrel
+
+type: improvement
+file: hashcat-cli
+desc: added hashcat.pot potfile in which every recovered plaintext is stored
+cred: legion
+
+type: improvement
+file: rules
+desc: added best64.rule
+cred: atom
+
+type: documentation
+file: contact.txt
+desc: added homepage, changed email
+cred: atom
+
+type: documentation
+file: performance.txt
+desc: shows performance progress
+cred: atom
+
+* changes v0.33 -> v0.34:
+
+type: bug
+file: hashcat-cli
+desc: show status-screen only once (per second)
+cred: phoenix
+
+type: improvement
+file: hashcat-cli
+desc: added -m 105: sha1(strtolower($username).$pass)
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1200: MD5(Chap)
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1300: MSSQL
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: MD5 speed increase on i7 +13%, on core2 +2%
+cred: atom
+
+type: extension
+file: A0.M105
+desc: added examples files
+cred: BMN4EVER
+
+type: extension
+file: A0.M1200
+desc: added examples files
+cred: Swenum
+
+type: extension
+file: A0.M1300
+desc: added examples files
+cred: budden
+
+type: extension
+file: todos.txt
+desc: removed todos file, instead use hashcat forum
+cred: atom
+
+type: distribution
+file: hashcat-cli
+desc: no longer using upx, generates some false-positive av alerts
+cred: makaronenma
+
+* changes v0.32 -> v0.33:
+
+type: bug
+file: hashcat-cli
+desc: floating point exception if --bf-cs-buf has zero size
+cred: Aritmos
+
+type: bug
+file: hashcat-cli
+desc: number of segments display overflow on huge wordlist on windows
+cred: the_stranger
+
+type: bug
+file: hashcat-cli
+desc: segfault in attack-mode 1 when concatinating two oversized words
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 800: SHA-1(Django)
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 900: MD4
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1000: NTLM
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added -m 1100: Domain Cached Credentials
+cred: atom
+
+type: extension
+file: A0.M800, A0.M900, A0.M1000
+desc: added examples files
+cred: K9
+
+type: extension
+file: A0.M1100
+desc: added examples files
+cred: the_stranger
+
+* changes v0.31 -> v0.32:
+
+type: bug
+file: hashcat-cli
+desc: slow loading of big external-salt files on windows
+cred: K9
+
+type: bug
+file: hashcat-cli
+desc: integer overflow in options -s and -l
+cred: moncojhr, Arkaic
+
+type: bug
+file: hashcat-cli
+desc: accept md5(Unix) salts of length 0
+cred: the_stranger
+
+type: bug
+file: hashcat-cli
+desc: crashes if cpu does not support sse2
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: optimized attack-mode 4 and renamed it to permutation attack
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: added debug-mode 2: store every recovered password (build dictionaries)
+cred: K9
+
+type: documentation
+file: contact.txt
+desc: added email
+cred: atom
+
+type: documentation
+file: credits.txt
+desc: added credits information file
+cred: atom
+
+* changes v0.30 -> v0.31:
+
+type: bug
+file: hashcat-cli
+desc: random seed for -g was not initialized
+cred: D3ad0ne
+
+type: bug
+file: hashcat-cli
+desc: output does not show recovered hash (only password) when using -m 300
+cred: krypt3r, lemon
+
+type: bug
+file: hashcat-cli
+desc: CRLF in --eula and --help was \r\r\n, should be \r\n
+cred: hakre
+
+type: improvement
+file: hashcat-cli
+desc: support loading of already recovered passwords from outfile not MD5
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: implemented idea of new attack-mode. it needs optimization, dont use it
+cred: atom
+
+type: improvement
+file: hashcat-cli
+desc: load md5(Unix) salts of dynamic length (up to 8 chars)
+cred: Sc00bz
+
+type: improvement
+file: hashcat-cli
+desc: display notice "NOTE: press enter for status-screen" on startup
+cred: goblinmax
+
+type: improvement
+file: hashcat-cli
+desc: added --generate-rules-func-min and --generate-rules-func-max
+cred: atom
+
+type: improvement
+file: generated.rule
+desc: add more rules which recovered a password
+cred: ErrorNeo
+
+type: improvement
+file: hashcat-cli, bugs.txt, leetspeak.rule
+desc: typos
+cred: D3ad0ne
+
+type: extension
+file: A0.M101, A0.M102, A0.M200, A0.M300, A0.M400, A0.M500
+desc: added examples files
+cred: atom
+
+type: documentation
+file: changes.txt
+desc: normalized text format
+cred: atom
+
+type: documentation
+file: contact.txt
+desc: added contact information file
+cred: atom
+
+* changes v0.29 -> v0.30:
+
+first public release
