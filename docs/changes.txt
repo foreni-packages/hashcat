@@ -1,3 +1,92 @@
+* changes v0.42 -> v0.43:
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 2500 = WPA/WPA2
+trac: #28
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 3720 = md5($pass.md5($salt))
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 3721 = WebEdition CMS
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5100 = Half MD5
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5200 = Password Safe SHA-256
+trac: #19
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5300 = IKE-PSK MD5
+trac: #5
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5400 = IKE-PSK SHA1
+trac: #5
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5500 = NetNTLMv1
+trac: #51
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5600 = NetNTLMv2
+trac: #56
+
+type: feature
+file: hashcat-cli
+desc: added new line to status output
+trac: #14
+
+type: feature
+file: hashcat-cli
+desc: added --expire option to view timebomb date
+
+type: feature
+file: hashcat-cli
+desc: added expiration timer 2 months before expiration
+
+type: feature
+file: hashcat-cli
+desc: check for cpu instruction set on startup or die gracefully
+trac: #81
+
+type: bug
+file: hashcat-cli
+desc: fixed bug in table-attack
+trac: #29
+
+type: bug
+file: hashcat-cli
+desc: fixed bug in rule-engine in Dx function
+trac: #52
+
+type: bug
+file: hashcat-cli
+desc: fixed bug pot file contains incorrect hash
+trac: #77
+
+type: bug
+file: hashcat-cli
+desc: fixed bug in user-defined charset if using to many predefined variables
+
+type: bug
+file: hashcat-cli
+desc: fixed bug in hex-charset
+
+type: bug
+file: hashcat-cli
+desc: fixed bug that crashed hashcat on windows xp
+
 * changes v0.41 -> v0.42:
 
 type: feature
