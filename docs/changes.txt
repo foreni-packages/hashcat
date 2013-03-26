@@ -1,3 +1,35 @@
+* changes v0.43 -> v0.44:
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 9999 = Plaintext
+trac: #45
+
+type: feature
+file: hashcat-cli
+desc: added mode -m 5500 = NetNTLMv1 + ESS
+trac: #96
+
+type: feature
+file: kernels
+desc: added -m 5700 = Cisco-IOS SHA256
+cred: philsmd
+
+type: change
+file: hashcat-cli
+desc: changed the hash-format for NetNTLMv1 and NetNTLMv2 to .lc format
+cred: #98
+
+type: bug
+file: hashcat-cli
+desc: fixed bug in 32 bit version, did not crack -m 1800 sha512crypt
+trac: #92
+
+type: bug
+file: hashcat-cli
+desc: fixed bug in NetNTLMv2 parser
+trac: #95
+
 * changes v0.42 -> v0.43:
 
 type: feature
