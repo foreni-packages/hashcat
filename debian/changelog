@@ -1,3 +1,9 @@
+hashcat (0.44-1kali0) kali; urgency=low
+
+  * Imported new upstream version
+
+ -- Devon Kearns <dookie@kali.org>  Tue, 26 Mar 2013 13:37:36 -0600
+
 hashcat (0.43-1kali0) kali; urgency=low
 
   * Imported new upstream release
