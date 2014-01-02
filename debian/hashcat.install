@@ -1,4 +1,5 @@
 debian/helper-script/* usr/bin/
+charsets usr/share/hashcat/
 docs usr/share/hashcat/
 examples usr/share/hashcat/
 rules usr/share/hashcat/
