@@ -1,3 +1,332 @@
+* changes v0.46 -> v0.47:
+
+type: feature
+file: hashcat-cli
+desc: added -m 123 = EPi
+
+type: feature
+file: hashcat-cli
+desc: added -m 1430 = sha256(unicode($pass).$salt)
+
+type: feature
+file: hashcat-cli
+desc: added -m 1440 = sha256($salt.unicode($pass))
+
+type: feature
+file: hashcat-cli
+desc: added -m 1441 = EPiServer 6.x >= v4
+
+type: feature
+file: hashcat-cli
+desc: added -m 1711 = SSHA-512(Base64), LDAP {SSHA512}
+
+type: feature
+file: hashcat-cli
+desc: added -m 1730 = sha512(unicode($pass).$salt)
+
+type: feature
+file: hashcat-cli
+desc: added -m 1740 = sha512($salt.unicode($pass))
+
+type: feature
+file: hashcat-cli
+desc: added -m 7400 = SHA-256(Unix)
+trac: #176
+
+type: feature
+file: hashcat-cli
+desc: added -m 7600 = Redmine SHA1
+
+type: feature
+file: hashcat-cli
+desc: debug mode can now be used also together with -g, generate rule
+
+type: feature
+file: hashcat-cli
+desc: support added for using external salts together with mode 160 = HMAC-SHA1 (key = $salt)
+
+type: feature
+file: hashcat-cli
+desc: allow empty salt/key for HMAC algos
+
+type: feature
+file: hashcat-cli
+desc: allow variable rounds for hash modes 500, 1600, 1800, 3300, 7400 using rounds= specifier
+
+type: feature
+file: hashcat-cli
+desc: added --generate-rules-seed, sets seed used for randomization so rulesets can be reproduced
+
+type: feature
+file: hashcat-cli
+desc: added output-format type 8 (position:hash:plain)
+
+type: feature
+file: hashcat-cli
+desc: updated/added some hcchr charset files in /charsets, some new files: Bulgarian, Polish, Hungarian
+cred: Rub3nCT
+
+type: feature
+file: hashcat-cli
+desc: format output when using --show according to the --outfile-format option
+trac: #117
+
+type: feature
+file: hashcat-cli
+desc: show mask length in status screen
+trac: #180
+
+type: bug
+file: hashcat-cli
+desc: --disable-potfile in combination with --show or --left resulted in a crash, combination was disallowed
+
+type: bug
+file: hashcat-cli
+desc: --help had wrong algorithm for hash mode 40
+
+type: bug
+file: hashcat-cli
+desc: whenever the plain corresponding to the hash (single hash run) was found, avoid printing or storing it more than once
+
+type: bug
+file: hashcat-cli
+desc: wrong plain in output for sha1-based hashes with AVX/XOP binaries
+trac: #173
+
+type: bug
+file: hashcat-cli
+desc: plaintext (-m 9999) multi-hashes were not successfully recovered
+trac: #199
+
+type: bug
+file: hashcat-cli
+desc: fixed crashes with hash mode -m 400 (phpass) when the plain length was greater 48
+trac: #221
+
+type: bug
+file: hashcat-cli
+desc: not loading all salts when using salted sha1 modes
+trac: #227
+
+* changes v0.45 -> v0.46:
+
+type: feature
+file: hashcat-cli
+desc: added -m 11 = Joomla
+
+type: feature
+file: hashcat-cli
+desc: added -m 21 = osCommerce, xt:Commerce
+
+type: feature
+file: hashcat-cli
+desc: added -m 30 = md5(unicode($pass).$salt)
+
+type: feature
+file: hashcat-cli
+desc: added -m 40 = md5($salt.unicode($pass))
+
+type: feature
+file: hashcat-cli
+desc: added -m 112 = Oracle 11g
+
+type: feature
+file: hashcat-cli
+desc: added -m 130 = sha1(unicode($pass).$salt)
+
+type: feature
+file: hashcat-cli
+desc: added -m 132 = MSSQL(2005)
+
+type: feature
+file: hashcat-cli
+desc: added -m 140 = sha1($salt.unicode($pass))
+
+type: feature
+file: hashcat-cli
+desc: added -m 2400 = Cisco-PIX MD5
+
+type: feature
+file: hashcat-cli
+desc: added -m 3200 = bcrypt, Blowfish(OpenBSD)
+
+type: feature
+file: hashcat-cli
+desc: added -m 5800 = Samsung Android Password/PIN
+
+type: feature
+file: hashcat-cli
+desc: added -m 7000 = Fortigate (FortiOS)
+
+type: feature
+file: hashcat-cli
+desc: added -m 7100 = OS X v10.8
+
+type: feature
+file: hashcat-cli
+desc: added -m 7200 = GRUB 2
+
+type: feature
+file: hashcat-cli
+desc: added -m 7300 = IPMI2 RAKP HMAC-SHA1
+
+type: feature
+file: hashcat-cli
+desc: make all --outfile-formats similar to oclHashcat, adds new outfile-formats
+trac: #99
+
+type: feature
+file: hashcat-cli
+desc: Debug mode: output to stderr instead of stdout
+trac: #146
+
+type: feature
+file: hashcat-cli
+desc: New debug mode 3, output word + separator + finding rule
+trac: #156
+
+type: feature
+file: hashcat-cli
+desc: more flexible salt length for AIX hashes
+trac: #157
+
+type: feature
+file: hashcat-cli
+desc: Allow the usage of external salts (-e) together w/ -m 121 (SMF > 1.1)
+trac: #163
+
+type: feature
+file: hashcat-cli
+desc: New switches: --username (ignore username in hash file), --show (cracked), --left (show un-cracked)
+
+type: feature
+file: hashcat-cli
+desc: Add outfile format reference in help (not-inline)
+
+type: improvement
+file: hashcat-cli
+desc: mode -m 111 nsldaps: more flexible salt length (0-20 chars)
+
+type: improvement
+file: hashcat-cli
+desc: mode -m 1000 NTLM: Performance increased by 22% (60 MH/s -> 73 MH/s)
+
+type: improvement
+file: hashcat-cli
+desc: mode -m 1800 sha512crypt: Allow up to 55 char passwords
+
+type: improvement
+file: hashcat-cli
+desc: mode -m 1800 sha512crypt: Performance increased by 82% (2010H/s -> 3670H/s)
+
+type: bug
+file: hashcat-cli
+desc: include salt for hash mode 1722 OS X v10.7 in output
+
+type: bug
+file: hashcat-cli
+desc: fixed Half MD5 input/output format
+
+type: bug
+file: hashcat-cli
+desc: fixed MD5(CHAP) output format
+
+type: bug
+file: hashcat-cli
+desc: expire time (--expire) not showing valid timestamp fixed
+
+type: bug
+file: hashcat-cli
+desc: don't output salts when --remove is used, but else always output the salts
+
+type: bug
+file: hashcat-cli
+desc: --remove and single hash cracking should output empty file on success
+
+* changes v0.44 -> v0.45:
+
+type: feature
+file: hashcat-cli
+desc: show status screen also when all hashes were recovered AND add start/stop time too
+
+type: feature
+file: hashcat-cli
+desc: added -m 6300 = AIX {smd5}
+cred: philsmd
+
+type: feature
+file: hashcat-cli
+desc: added -m 6400 = AIX {ssha256}
+cred: philsmd
+
+type: feature
+file: hashcat-cli
+desc: added -m 6500 = AIX {ssha512}
+cred: philsmd
+
+type: feature
+file: hashcat-cli
+desc: added -m 6700 = AIX {ssha1}
+cred: philsmd
+
+type: feature
+file: hashcat-cli
+desc: added -m 6900 = GOST R 34.11-94
+cred: Xanadrel
+
+type: feature
+file: hashcat-cli
+desc: dropped predefined charsets ?h, ?F, ?G and ?R
+trac: #55
+
+type: feature
+file: hashcat-cli
+desc: added a collection of language-specific charset-files for use with masks
+trac: #55
+
+type: feature
+file: hashcat-cli
+desc: changed the E rule to lowercase all input before processing, its more intuitive
+trac: #110
+
+type: feature
+file: rules
+desc: added a more more complex leetspeak rules file from unix-ninja
+trac: #112
+
+type: feature
+file: hashcat-cli
+desc: changed outfile opts to line up with OCL style
+trac: #120
+
+type: feature
+file: hashcat-cli
+desc: --remove in combination w/ external salts should output plain hash files only (no salt)
+trac: #153
+
+type: bug
+file: hashcat-cli
+desc: fix progress line in status screen when all hashes were recovered
+
+type: bug
+file: hashcat-cli
+desc: fix for some possible memory overflow problems
+
+type: bug
+file: hashcat-cli
+desc: an external salt sort failure caused some hashes not to be checked against the digests
+trac: #74
+
+type: bug
+file: hashcat-cli
+desc: fixed a null-pointer dereference that can lead to a segmentation fault
+trac: #104
+
+type: bug
+file: hashcat-cli
+desc: fixed a bug if hashlist contains words with ascii character code >= 0x80
+trac: #108
+
 * changes v0.43 -> v0.44:
 
 type: feature
@@ -11,7 +340,7 @@ desc: added mode -m 5500 = NetNTLMv1 + ESS
 trac: #96
 
 type: feature
-file: kernels
+file: hashcat-cli
 desc: added -m 5700 = Cisco-IOS SHA256
 cred: philsmd
 
