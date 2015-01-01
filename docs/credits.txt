@@ -7,7 +7,7 @@ Contributions from: philsmd, m4tr1x, Xanadrel, radix
 
 Author: Phillip Paul Fuchs
 
-* Rule rules/passwordspro.rule
+* Rule rules/InsidePro-*.rule
 
 Author: InsidePro Software
 

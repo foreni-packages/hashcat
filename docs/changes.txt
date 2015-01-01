@@ -1,3 +1,131 @@
+* changes v0.47 -> v0.48:
+
+type: feature
+file: hashcat-cli
+desc: added AVX2 target
+
+type: feature
+file: hashcat-cli
+desc: Added support for -m 8900 = scrypt
+trac: #295
+
+type: feature
+file: hashcat-cli
+desc: Added support for -m 9300 = Cisco $9$
+
+type: change
+file: hashcat-cli
+desc: renamed -m 112 = Oracle 11g to -m 112 = Oracle 11g/12c
+
+type: change
+file: hashcat-cli
+desc: renamed hash type Joomla into 'Joomla < 2.5.18', -m 400 has now also the note about MD5(Joomla)
+trac: #402
+
+type: change
+file: hashcat-cli
+desc: added support for plains lengths up to 64 for -m 1800 = sha512crypt
+
+type: change
+file: hashcat-cli
+desc: renamed -m 4500 format from sha1(sha1($pass)) to Double SHA1
+
+type: change
+file: hashcat-cli
+desc: renamed -m 4800 format from MD5(Chap) to MD5(Chap), iSCSI CHAP authentication
+
+type: change
+file: hashcat-cli
+desc: renamed -m 9999 = Plaintext to -m 99999 = Plaintext
+
+type: feature
+file: hashcat-cli
+desc: don't modify bcrypt signature ($2a$, $2x$, $2y$) when parsing/printing the hashes
+
+type: feature
+file: hashcat-cli
+desc: added some new output formats with crack position, aligned output formats with oclHashcat
+
+type: feature
+file: hashcat-cli
+desc: synchronized rule rejection occurences with rule engine of oclHashcat
+
+type: feature
+file: hashcat-cli
+desc: added --runtime argument such that user can set the maximum number of seconds hashcat should run
+trac: #105
+
+type: feature
+file: hashcat-cli
+desc: change output plains to $HEX[...] format by default, you can disable it with --outfile-autohex-disable
+trac: #148
+
+type: feature
+file: hashcat-cli
+desc: OS X v10.9 uses same algorithm as 10.8, help/docs updated accordingly
+trac: #236
+
+type: feature
+file: hashcat-cli
+desc: Added support for higher --threads values, auto-detection of available CPU cores
+trac: #368
+
+type: feature
+file: rules
+desc: added InsidePro-HashManager.rule
+
+type: feature
+file: rules
+desc: added dive.rule
+Trac: #519
+
+type: change
+file: hashcat-cli
+desc: aligned some switches with oclHashcat switches, for instance renamed --disable-potfile to --potfile-disable
+
+type: change
+file: rules
+desc: renamed passwordspro.rule to InsidePro-PasswordsPro.rule
+
+type: bug
+file: hashcat-cli
+desc: --hash-mode was invalid, changed to --hash-type
+
+type: bug
+file: hashcat-cli
+desc: problems with very large ETA fixed, adapted status display to display ETA > 10 years similar to oclHashcat
+trac: #407
+
+type: bug
+file: hashcat-cli
+desc: fixed problem w/ 'delete range' rule (xNM) which did not allow to remove chars if at the very end
+trac: #444
+
+type: bug
+file: hashcat-cli
+desc: fixed memory problem in --debug-mode 3 and 4
+trac: #470
+
+type: bug
+file: hashcat-cli
+desc: fixed problems with special multi-byte plains and -m 200 = MySQL323
+
+type: bug
+file: hashcat-cli
+desc: fixed hash mode -m 1100 == dcc - hash:salt pairs w/ almost identical salts but of different case failed to crack
+
+type: bug
+file: hashcat-cli
+desc: fixed issues with 32 bit version - affected hash types are 1750, 1760, 6500 or 7100
+
+type: bug
+file: hashcat-cli
+desc: fixed -m 5600 parsing + solves crash that could occur when hash file contained wrong hash format
+
+type: feature
+file: hashcat-cli
+desc: fixed -m 7600 = Redmine Project Management Web App hash type number, -m 7600 gave error with previous version
+
 * changes v0.46 -> v0.47:
 
 type: feature
@@ -626,7 +754,7 @@ desc: Fixed a bug in sha512crypt leading to code not found
 
 type: bug
 file: hashcat-cli
-desc: Fixed a bug in commandline-parser which occours if running in --stdout mode
+desc: Fixed a bug in commandline-parser which occurs if running in --stdout mode
 cred: Xanadrel
 
 type: bug
