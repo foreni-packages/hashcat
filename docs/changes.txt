@@ -1,3 +1,88 @@
+* changes v0.48 -> v0.49:
+
+type: improvement
+file: hashcat-cli
+desc: implemented new attack-mode 6 Prince
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 12 = PostgreSQL
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 23 = Skype
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 133 = PeopleSoft
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 1421 = hMailServer
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 2410 = Cisco-ASA MD5
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 2612 = PHPS
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 3711 = Mediawiki B type
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 4710 = sha1($salt.$pass.$salt)
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 7900 = Drupal7
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 8400 = WBB3, Woltlab Burning Board 3
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 9200 = Cisco $8$
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 9900 = Radmin2
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 10000 = Django (PBKDF2-SHA256)
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 10200 = Cram MD5
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 10300 = SAP CODVN H (PWDSALTEDHASH) iSSHA-1
+
+type: feature
+file: hashcat-cli
+desc: added new switch --benchmark such that user can benchmark his cpu cracking performance
+trac: #253
+
+type: change
+file: hashcat-cli
+desc: renamed -m 800 = SHA1 (Django) to -m 124 = Django (SHA-1)
+
+type: bug
+file: hashcat-cli
+desc: Fixed salt length problem with -m 7600 = Redmine Project Management Web App
+trac: #543
+
+type: bug
+file: hashcat-cli
+desc: hash mode -m 5100 failed to match beginning, middle and end of MD5 hash
+trac: #544
+
 * changes v0.47 -> v0.48:
 
 type: feature
@@ -6,12 +91,12 @@ desc: added AVX2 target
 
 type: feature
 file: hashcat-cli
-desc: Added support for -m 8900 = scrypt
+desc: added support for -m 8900 = scrypt
 trac: #295
 
 type: feature
 file: hashcat-cli
-desc: Added support for -m 9300 = Cisco $9$
+desc: added support for -m 9300 = Cisco $9$
 
 type: change
 file: hashcat-cli
