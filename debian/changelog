@@ -1,3 +1,9 @@
+hashcat (0.50-0kali0) moto; urgency=low
+
+  * Imported new upstream release (Closes: 0002315)
+
+ -- Devon Kearns <dookie@kali.org>  Fri, 03 Jul 2015 06:30:08 -0600
+
 hashcat (0.49-0kali0) kali; urgency=medium
 
   * Imported new upstream release (Closes: 0002000)
