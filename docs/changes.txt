@@ -1,3 +1,134 @@
+* changes v0.49 -> v0.50:
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 11000 = PrestaShop
+trac: #589
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 11100 = PostgreSQL Challenge-Response Authentication (MD5)
+trac: #490
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 11200 = MySQL Secure Password Authentication
+trac: #541
+
+type: feature
+file: hashcat-cli
+desc: added support for -m 11400 = SIP digest authentication (MD5)
+trac: #539
+
+type: feature
+file: hashcat-cli
+desc: added interactive mode with prompt
+trac: #569
+
+type: feature
+file: hashcat-cli
+desc: implemented bypass mode for straight, combination, toggle-case, permuatation and table-lookup attack modes
+trac: #570
+
+type: feature
+file: hashcat-cli
+desc: added support for --status-automat i.e. making the status output machine-readable
+trac: #534
+
+type: feature
+file: hashcat-cli
+desc: implemented --status and --status-timer which allows to configure the time in seconds for periodic status updates
+trac: #571
+
+type: feature
+file: hashcat-cli
+desc: added support for --username when using --show
+trac: #567
+
+type: feature
+file: hashcat-cli
+desc: added support for --username when using --remove
+trac: #568
+
+type: feature
+file: hashcat-cli
+desc: backported latest prince-attack code from github version
+
+type: feature
+file: hashcat-cli
+desc: added missing -s and -l support for prince-attack
+trac: #584
+
+type: feature
+file: hashcat-cli
+desc: added support for hashcat mask files (.hcmask)
+trac: #586
+
+type: feature
+file: hashcat-cli
+desc: new workaround for -m 2500 = WPA/WPA2 key versions which are not valid (should always be < 256)
+
+type: change
+file: hashcat-cli
+desc: dropped avx/avx2 binaries as they do not really contain avx/avx2 code
+
+type: change
+file: hashcat-cli
+desc: increment mode disabled by default, --increment switch must be used now for increment mode
+trac: #572
+
+type: change
+file: hashcat-cli
+desc: renamed -a 6 prince-attack to -a 8 prince-attack
+
+type: change
+file: hashcat-cli
+desc: renamed -m 112 Oracle 11g/12c to -m 112 Oracle S: Type (Oracle 11+)
+
+type: change
+file: hashcat-cli
+desc: renamed -m 3810 = md5($salt.$pass.$salt) to -m 3800 = md5($salt.$pass.$salt)
+
+type: change
+file: hashcat-cli
+desc: renamed -m 4710 = sha1($salt.$pass.$salt) to -m 4900 = sha1($salt.$pass.$salt)
+
+type: change
+file: hashcat-cli
+desc: renamed -m 7100 = OS X v10.8 / v10.9 to OS X v10.8+
+
+type: change
+file: hashcat-cli
+desc: synchronized default value for PRINCE attack-mode parameters with princeprocessor
+
+type: bug
+file: hashcat-cli
+desc: fixed --runtime under windows in PRINCE attack mode
+trac: #555
+
+type: bug
+file: hashcat-cli
+desc: in PRINCE attack-mode removed unwanted dupes in --stdout mode
+
+type: bug
+file: hashcat-cli
+desc: In PRINCE attack-mode fixed a memory leak
+
+type: bug
+file: hashcat-cli
+desc: added additional checks for hexadecimal values supplied in masks by using the --hex-charset switch
+trac: #610
+
+type: bug
+file: hashcat-cli
+desc: fixed --remove feature in single-hash mode
+trac: #553
+
+type: bug
+file: hashcat-cli
+desc: fixed problem in combinator attack, duplicates were sometimes in the output
+trac: #228
+
 * changes v0.48 -> v0.49:
 
 type: improvement
@@ -539,6 +670,10 @@ type: bug
 file: hashcat-cli
 desc: fixed a bug if hashlist contains words with ascii character code >= 0x80
 trac: #108
+
+type: bug
+file: hashcat-cli
+desc: fixed a bug in -m 8900 = SCRYPT in extreme high settings
 
 * changes v0.43 -> v0.44:
 
